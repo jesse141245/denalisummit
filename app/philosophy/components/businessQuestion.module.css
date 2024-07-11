@@ -1,0 +1,108 @@
+.valuesSection {
+  position: relative;
+  padding: 2rem;
+  padding-bottom: 6rem;
+}
+
+.valuesSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .65;
+  z-index: -1;
+  background: url('/background1.jpg') center center/cover no-repeat;
+}
+
+
+.valuesSection h2 {
+  color: #3b4246;
+  text-align: left;
+  margin-left: 20vw; /* Adjusted to use viewport width */
+  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.value {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.left .valueContent {
+  grid-column: 1 / 2;
+  text-align: left;
+  margin-left: 25vw; /* Adjusted to use viewport width */
+  margin-right: -5vw; /* Adjusted to use viewport width */
+}
+
+.right .valueContent {
+  grid-column: 2 / 2;
+  text-align: left;
+  margin-right: 22vw; /* Adjusted to use viewport width */
+  margin-left: -2vw; /* Adjusted to use viewport width */
+  margin-top: -2rem;
+  margin-bottom: -3rem;
+}
+
+.valueContent {
+  max-width: 80%; /* Adjust this to control the width of the content */
+}
+
+.value h3 {
+  font-size: 1.5rem;
+  color: #3b4246;
+  margin-bottom: -.5rem;
+  margin-left: -2rem;
+}
+
+.value h4 {
+  font-weight: normal;
+  font-size: 1.25rem;
+  color: #3b4246;
+  margin-top: 0.5rem;
+  margin-bottom: -.3rem;
+}
+
+.value p {
+  font-size: 1rem;
+  color: #3e4447;
+  margin-top: 0.5rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .valuesSection h2 {
+    margin-left: 18vw; /* Adjust margin based on screen size */
+  }
+
+  .left .valueContent {
+    margin-left: 23vw; /* Adjust margin based on screen size */
+    margin-right: -4vw; /* Adjust margin based on screen size */
+  }
+
+  .right .valueContent {
+    margin-right: 20vw; /* Adjust margin based on screen size */
+    margin-left: -1vw; /* Adjust margin based on screen size */
+  }
+}
+
+@media (max-width: 768px) {
+  .valuesSection h2 {
+    margin-left: 15vw; /* Adjust margin based on screen size */
+  }
+
+  .left .valueContent {
+    margin-left: 20vw; /* Adjust margin based on screen size */
+    margin-right: -3vw; /* Adjust margin based on screen size */
+  }
+
+  .right .valueContent {
+    margin-right: 18vw; /* Adjust margin based on screen size */
+    margin-left: 0vw; /* Adjust margin based on screen size */
+  }
+}

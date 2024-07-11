@@ -1,0 +1,68 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fffff0;
+  }
+  
+  .text {
+    font-size: 1.5rem;
+    font-weight: 450;
+    text-align: left;
+    margin-left: 14rem;
+    color: #3b4246;
+  }
+  
+  .formRow {
+    margin: 2rem 14rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .inputData {
+    position: relative;
+    width: 32%;
+  }
+  
+  .inputData input,
+  .inputData textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    background-color: #fffff0;
+
+  }
+  
+  .inputData label {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #333;
+  }
+  
+  .inputData input:focus ~ label,
+  .inputData input:valid ~ label,
+  .inputData textarea:focus ~ label,
+  .inputData textarea:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 0.8rem;
+    color: #0077b5;
+  }
+  
+  .textarea {
+    width: 100%;
+  }
+  
+  .hero-btns {
+    margin-top: 32px;
+  }
+  
+  .hero-btns .btn {
+    margin: 6px;
+  }

@@ -1,0 +1,40 @@
+.contact {
+    padding: 40px 20px;
+    background-color: #FFFFE4;
+    margin: 20px 0;
+    overflow-y: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formGroup label {
+    font-weight: bold;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 10px;
+    border: 1px solid #FFFFE4;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: FFFFE4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
