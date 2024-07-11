@@ -1,37 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import { getAccessToken } from '../../../oauth2';
 
 export async function POST(req: NextRequest) {
-  const { firstName, lastName, email, message } = await req.json();
-
   try {
-    const accessToken = await getAccessToken();
+    const { firstName, lastName, email, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: process.env.EMAIL_HOST as string,
+      port: parseInt(process.env.EMAIL_PORT as string, 10),
+      secure: false,
       auth: {
-        type: 'OAuth2',
-        user: process.env.GMAIL_USER,
-        clientId: process.env.GMAIL_CLIENT_ID,
-        clientSecret: process.env.GMAIL_CLIENT_SECRET,
-        refreshToken: process.env.GMAIL_REFRESH_TOKEN,
-        accessToken,
+        user: process.env.EMAIL_USER as string,
+        pass: process.env.EMAIL_PASS as string,
       },
     });
 
     const mailOptions = {
-      from: process.env.GMAIL_USER,
-      to: 'woopeejesse@gmail.com',
+      from: process.env.EMAIL_USER as string,
+      to: 'brittany@denalisummitgroup.com',
       subject: 'Contact Form Message',
       text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`,
     };
 
     await transporter.sendMail(mailOptions);
-
     return NextResponse.json({ success: 'Email sent successfully' }, { status: 200 });
   } catch (error) {
-    console.error(error);
+    console.error('Error sending email:', error);
     return NextResponse.json({ error: 'Error sending email' }, { status: 500 });
   }
 }
