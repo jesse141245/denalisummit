@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Partners.module.css';
+import Image from 'next/image';
 
 const Partners: React.FC = () => {
     const partnersLogosRef = useRef<HTMLDivElement | null>(null);

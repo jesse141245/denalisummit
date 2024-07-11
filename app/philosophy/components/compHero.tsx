@@ -10,7 +10,7 @@ const compHero: React.FC = () => {
                 We believe simple businesses have sophisticated owners.
             </p>
             <p>
-                We believe simple business models do not equate to simple operations. (Aka they’re not simple to run)
+                We believe simple business models do not equate to simple operations. (Aka they&apos;re not simple to run)
             </p>
         </section>
     );
