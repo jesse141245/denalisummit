@@ -204,7 +204,12 @@
     }
   }
   
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
+    .navbarLogo{
+      margin-top: 3px;
+      left: 46%; /* Center horizontally */
+      transform: translateX(-54%); /* Center horizontally */
+    }
     .navLinks {
       left: 4%; /* Move links to the edge */
     }
