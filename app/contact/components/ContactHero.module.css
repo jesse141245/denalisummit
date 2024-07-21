@@ -101,3 +101,29 @@
         top: calc(10% + 11rem); 
     }
 }
+@media (max-width: 480px) {
+    .contactHeroContainer {
+      padding: 20px; /* Adjust padding for smaller screens */
+      overflow-y: hidden; /* Ensure overflow is hidden */
+      min-height: auto; /* Allow height to adjust based on content */
+      display: block; /* Change to block layout to ensure elongation */
+    }
+  
+    .contactHeroContainer h2, .contactHeroContainer p {
+      position: relative;
+      left: 0; /* Reset left position */
+      right: 0; /* Reset right position */
+      text-align: left; /* Keep text left aligned */
+      white-space: normal; /* Allow text wrapping */
+      overflow: visible; /* Allow text overflow */
+      margin-bottom: 1rem; /* Add margin for spacing */
+    }
+  
+    .contactHeroContainer h2 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+  
+    .contactHeroContainer p {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }  

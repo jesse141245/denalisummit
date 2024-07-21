@@ -11,6 +11,7 @@
   overflow-y: disabled;
   border-bottom: .5px solid #FFFFE4;
 }
+
 .navbarHidden {
   top: -100px; 
   transition: top 0.3s;
@@ -20,6 +21,7 @@
   top: 0;
   transition: top 0.3s;
 }
+
 .navbarContainer {
   display: flex;
   justify-content: center;
@@ -62,7 +64,7 @@
 }
 
 .navLinks {
-  margin-top:-8px;
+  margin-top: -8px;
   color: #FFFFE4;
   display: flex;
   align-items: center;
@@ -115,20 +117,20 @@
     transition: all 0.5s ease;
     z-index: 1;
   }
+  
   .navMenu.hidden {
     top: -300px; 
   }
+  
   .navLinks {
     text-align: center;
-    left: 14%;
-    height:10%;
+    height: 10%;
     width: 60%;
     display: table;
     margin-top: -10px;
     padding: 8px 20px; 
     border: 1px solid #FFFFE4;
-      
-
+    left: 13%;
   }
 
   .navLinks:hover {
@@ -141,26 +143,24 @@
     position: absolute;
     margin-top: -3px;
     top: 0;
-    left: 0;
     transform: translate(25%, 50%);
+    left: 20vw;
   }
 
   .menuIcon {
     display: block;
-    position: absolute;
     position: absolute;
     top: -12px;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #FFFFE4
+    color: #FFFFE4;
   }
 
   .fa-times {
     color: #FFFFE4;
     font-size: 2rem;
-    
   }
 
   .navLinksMobile {
@@ -183,13 +183,28 @@
     color: #2b572c;
     transition: 250ms;
   }
+  
   .navMenu::-webkit-scrollbar {
     display: none;
   }
 
-
   .navMenu {
     -ms-overflow-style: none; 
     scrollbar-width: none; 
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navLinks {
+      left: 7%; /* Move links further left */
+    }
+    .navbarLogo{
+      left: 18%
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .navLinks {
+      left: 4%; /* Move links to the edge */
+    }
   }
 }

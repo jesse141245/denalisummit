@@ -16,11 +16,10 @@
   background: url('/background1.jpg') center center/cover no-repeat;
 }
 
-
 .valuesSection h2 {
   color: #3b4246;
   text-align: left;
-  margin-left: 20vw; /* Adjusted to use viewport width */
+  margin-left: 22vw; /* Adjusted to use viewport width */
   font-weight: normal;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -36,7 +35,7 @@
 .left .valueContent {
   grid-column: 1 / 2;
   text-align: left;
-  margin-left: 25vw; /* Adjusted to use viewport width */
+  margin-left: 28vw; /* Adjusted to use viewport width */
   margin-right: -5vw; /* Adjusted to use viewport width */
 }
 
@@ -44,7 +43,7 @@
   grid-column: 2 / 2;
   text-align: left;
   margin-right: 22vw; /* Adjusted to use viewport width */
-  margin-left: -2vw; /* Adjusted to use viewport width */
+  margin-left: 1vw; /* Adjusted to use viewport width */
   margin-top: -2rem;
   margin-bottom: -3rem;
 }
@@ -104,5 +103,29 @@
   .right .valueContent {
     margin-right: 18vw; /* Adjust margin based on screen size */
     margin-left: 0vw; /* Adjust margin based on screen size */
+  }
+}
+
+@media (max-width: 480px) {
+  .valuesSection h2 {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .value {
+    display: block;
+  }
+
+  .left .valueContent, .right .valueContent {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 90%; /* Adjust the max-width if needed */
+  }
+
+  .left .valueContent, .right .valueContent {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

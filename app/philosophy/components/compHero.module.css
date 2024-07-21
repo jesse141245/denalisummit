@@ -11,9 +11,9 @@
     padding: 108px 20px; /* Left and right padding */
     overflow-y: hidden;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
-
-.compHeroContainer::before {
+  }
+  
+  .compHeroContainer::before {
     content: '';
     position: absolute;
     overflow: hidden;
@@ -26,9 +26,9 @@
     opacity: 0.25;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
     max-width: 100%; /* Ensure the pseudo-element doesn't exceed the container's width */
-}
-
-.compHeroContainer h2, .compHeroContainer p {
+  }
+  
+  .compHeroContainer h2, .compHeroContainer p {
     position: absolute;
     left: 28vw; /* Adjusted left position to move content right */
     right: 15vw; /* Adjusted right position to move content right */
@@ -37,67 +37,95 @@
     text-align: left; /* Align text to the left */
     overflow: hidden; /* Prevent text wrapping */
     white-space: nowrap; /* Prevent text wrapping */
-}
-
-.compHeroContainer h2 {
+  }
+  
+  .compHeroContainer h2 {
     font-weight: normal;
     font-size: 2rem; /* Adjusted font size to be more responsive */
     top: 20%; /* Position from the top */
-}
-
-.compHeroContainer p:first-of-type {
+  }
+  
+  .compHeroContainer p:first-of-type {
     font-weight: normal;
     font-size: 1.125rem; /* Adjusted font size to be more responsive */
     top: calc(10% + 7rem); /* Reduced margin from the top of the h2 */
-}
-
-.compHeroContainer p:nth-of-type(2) {
+  }
+  
+  .compHeroContainer p:nth-of-type(2) {
     font-weight: normal;
     font-size: 1.125rem; /* Adjusted font size to be more responsive */
     top: calc(10% + 9rem); /* Reduced margin from the top of the first p */
-}
-
-.compHeroContainer p:nth-of-type(3) {
+  }
+  
+  .compHeroContainer p:nth-of-type(3) {
     font-weight: normal;
     font-size: 1.125rem; /* Adjusted font size to be more responsive */
     top: calc(10% + 11rem); /* Reduced margin from the top of the second p */
-}
-
-/* Media query for smaller screens */
-@media (max-width: 1200px) {
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 1200px) {
     .compHeroContainer h2, .compHeroContainer p {
-        left: 10vw; /* Adjust left position for smaller screens */
-        right: 5vw; /* Adjust right position for smaller screens */
+      left: 10vw; /* Adjust left position for smaller screens */
+      right: 5vw; /* Adjust right position for smaller screens */
     }
     .compHeroContainer h2 {
-        top: 20%; /* Maintain position from the top */
+      top: 20%; /* Maintain position from the top */
     }
     .compHeroContainer p:first-of-type {
-        top: calc(10% + 7rem); /* Reduced margin from the top of the h2 */
+      top: calc(10% + 7rem); /* Reduced margin from the top of the h2 */
     }
     .compHeroContainer p:nth-of-type(2) {
-        top: calc(10% + 9rem); /* Reduced margin from the top of the first p */
+      top: calc(10% + 9rem); /* Reduced margin from the top of the first p */
     }
     .compHeroContainer p:nth-of-type(3) {
-        top: calc(10% + 11rem); /* Reduced margin from the top of the second p */
+      top: calc(10% + 11rem); /* Reduced margin from the top of the second p */
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .compHeroContainer h2, .compHeroContainer p {
-        left: 7vw; /* Adjust left position for even smaller screens */
-        right: 3vw; /* Adjust right position for even smaller screens */
+      left: 7vw; /* Adjust left position for even smaller screens */
+      right: 3vw; /* Adjust right position for even smaller screens */
     }
     .compHeroContainer h2 {
-        top: 20%; /* Maintain position from the top */
+      top: 20%; /* Maintain position from the top */
     }
     .compHeroContainer p:first-of-type {
-        top: calc(10% + 7rem); /* Reduced margin from the top of the h2 */
+      top: calc(10% + 7rem); /* Reduced margin from the top of the h2 */
     }
     .compHeroContainer p:nth-of-type(2) {
-        top: calc(10% + 9rem); /* Reduced margin from the top of the first p */
+      top: calc(10% + 9rem); /* Reduced margin from the top of the first p */
     }
     .compHeroContainer p:nth-of-type(3) {
-        top: calc(10% + 11rem); /* Reduced margin from the top of the second p */
+      top: calc(10% + 11rem); /* Reduced margin from the top of the second p */
     }
-}
+  }
+  
+  @media (max-width: 480px) {
+    .compHeroContainer {
+      padding: 20px; /* Adjust padding for smaller screens */
+      overflow-y: hidden; /* Ensure overflow is hidden */
+      min-height: auto; /* Allow height to adjust based on content */
+      display: block; /* Change to block layout to ensure elongation */
+    }
+  
+    .compHeroContainer h2, .compHeroContainer p {
+      position: relative;
+      left: 0; /* Reset left position */
+      right: 0; /* Reset right position */
+      text-align: left; /* Keep text left aligned */
+      white-space: normal; /* Allow text wrapping */
+      overflow: visible; /* Allow text overflow */
+      margin-bottom: 1rem; /* Add margin for spacing */
+    }
+  
+    .compHeroContainer h2 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+  
+    .compHeroContainer p {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+  

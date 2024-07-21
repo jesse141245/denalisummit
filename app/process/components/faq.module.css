@@ -1,50 +1,80 @@
 .faqs {
-    text-align: center;
-    padding: 2rem 10rem;
-    background-color: #F1E8D8;
-  }
-  
-  .faqs h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #3b4246;
-    font-weight: 450;
+  text-align: center;
+  padding: 2rem 10rem;
+  background-color: #F1E8D8;
+}
 
-  }
-  
-  .faqsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+.faqs h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #3b4246;
+  font-weight: 450;
+}
+
+.faqsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.faqbox {
+  flex: 1 1 45%;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fffff8;
+}
+
+.faqbox h3 {
+  font-weight: 450;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3b4246;
+}
+
+.faqbox p {
+  font-size: 1rem;
+  color: #3b4246;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
   .faqbox {
-    flex: 1 1 45%;
-    margin: 1rem;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .faqs {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .faqs h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faqbox {
+    flex: 1 1 100%;
+    margin: 0.5rem 0;
     padding: 1rem;
     text-align: left;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     background-color: #fffff8;
   }
-  
+
   .faqbox h3 {
-    font-weight: 450;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #3b4246;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
   }
-  
+
   .faqbox p {
-    font-size: 1rem;
-    color: #3b4246;
+    font-size: 0.875rem;
   }
- 
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    .faqbox {
-      flex: 1 1 100%;
-    }
-  }
+}

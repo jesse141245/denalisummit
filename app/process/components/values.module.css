@@ -1,73 +1,124 @@
 .whatWeOffer {
-    position: relative;
-    padding: 2rem;
-    padding-bottom: 6rem;
-  }
-  
-  .whatWeOffer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .65;
-    z-index: -1;
-    background: url('/background1.jpg') center center/cover no-repeat;
-  }
-  
-  .whatWeOffer h2 {
-    font-weight: 450;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #3b4246;
-  }
-  
+  position: relative;
+  padding: 2rem;
+  padding-bottom: 6rem;
+}
+
+.whatWeOffer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .65;
+  z-index: -1;
+  background: url('/background1.jpg') center center/cover no-repeat;
+}
+
+.whatWeOffer h2 {
+  font-weight: 450;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #3b4246;
+}
+
+.offersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 24rem; /* Negative margin */
+  margin-right: 24rem; /* Negative margin */
+}
+
+.offer {
+  flex: 1 1 45%;
+  margin: 1rem;
+  padding: .5rem;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fffff8;
+  padding-left: 2rem; /* Positive padding */
+  padding-right: 2rem; /* Positive padding */
+}
+
+.offer h3 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3b4246;
+}
+
+.offer p {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #3b4246;
+}
+
+.offer img {
+  display: block;
+  margin-bottom: 1rem;
+  width: 40px;
+  height: 40px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
   .offersContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 24rem; /* Negative margin */
-    margin-right: 24rem; /* Negative margin */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem; /* Add padding to center the container */
   }
-  
+
   .offer {
-    flex: 1 1 45%;
-    margin: 1rem;
-    padding: .5rem;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatWeOffer {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .whatWeOffer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .offersContainer {
+    flex-direction: column;
+    align-items: center; /* Center items */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem; /* Add padding to center the container */
+  }
+
+  .offer {
+    flex: 1 1 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
     text-align: left;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     background-color: #fffff8;
-    padding-left: 2rem; /* Positive padding */
-    padding-right: 2rem; /* Positive padding */
   }
-  
+
   .offer h3 {
-    font-weight: normal;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #3b4246;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
   }
-  
+
   .offer p {
-    font-weight: normal;
-    font-size: 1rem;
-    color: #3b4246;
+    font-size: 0.875rem;
   }
-  
+
   .offer img {
-    display: block;
-    margin-bottom: 1rem;
-    width: 40px;
-    height: 40px;
+    margin-bottom: 0.75rem;
+    width: 30px;
+    height: 30px;
   }
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 768px) {
-    .offer {
-      flex: 1 1 100%;
-    }
-  }
-  
+}
