@@ -206,7 +206,7 @@
   
   @media screen and (max-width: 480px) {
     .navbarLogo{
-      margin-top: 3px;
+      margin-top: 6px;
       left: 46%; /* Center horizontally */
       transform: translateX(-54%); /* Center horizontally */
     }
