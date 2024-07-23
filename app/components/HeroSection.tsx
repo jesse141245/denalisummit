@@ -6,7 +6,7 @@ import Link from 'next/link';
 const HeroSection: React.FC = () => {
   return (
     <div className='hero-container'>
-      <video autoPlay muted loop disablePictureInPicture>
+      <video autoPlay muted loop disablePictureInPicture playsInline>
         <source src="/mountainvideo.mp4" type="video/mp4" />
       </video>
       <h1>We buy simple businesses.</h1>
