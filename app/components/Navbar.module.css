@@ -191,7 +191,7 @@
 
 @media screen and (max-width: 600px) {
   .navLinks {
-    left: 8%;
+    left: 9%;
   }
 
   .navbarLogo {
@@ -207,6 +207,6 @@
   }
   
   .navLinks {
-    left: 5%;
+    left: 6%;
   }
 }
