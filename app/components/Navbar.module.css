@@ -125,7 +125,7 @@
     margin-top: -10px;
     padding: 8px 20px; 
     border: 1px solid #FFFFE4;
-    left: 16%;
+    left: 13%;
   }
 
   .navLinks:hover {
@@ -191,7 +191,7 @@
 
 @media screen and (max-width: 600px) {
   .navLinks {
-    left: 7%;
+    left: 8%;
   }
 
   .navbarLogo {
@@ -207,6 +207,6 @@
   }
   
   .navLinks {
-    left: 4%;
+    left: 5%;
   }
 }
