@@ -10,6 +10,7 @@ video {
   overflow-y: hidden;
   opacity: .8;
   filter: brightness(70%);
+  pointer-events: none;
 }
 
 .hero-container {
