@@ -198,15 +198,17 @@
       left: 7%; /* Move links further left */
     }
     .navbarLogo{
+      margin-top: 2.5vw;
       left: 48%; /* Center horizontally */
-      transform: translate(-52%, -50%);
+      transform: translateX(-52%);
     }
   }
   
   @media screen and (max-width: 480px) {
     .navbarLogo{
+      margin-top: 2.5vw;
       left: 46%; /* Center horizontally */
-      transform: translate(-54%, -50%);
+      transform: translateX(-54%);
     }
     .navLinks {
       left: 4%; /* Move links to the edge */
