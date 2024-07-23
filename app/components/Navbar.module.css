@@ -8,7 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  overflow-y: disabled;
+  overflow-y: hidden;
   border-bottom: .5px solid #FFFFE4;
 }
 
@@ -24,22 +24,21 @@
 
 .navbarContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100%;
   max-width: 1500px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .navbarLogo {
   color: #FFFFE4;
-  justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 24px;
   display: flex;
   align-items: center;
-  margin-top: -3px;
 }
 
 .fa-typo3 {
@@ -92,10 +91,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-
   .navMenu {
     display: flex;
     flex-direction: column;
@@ -141,18 +136,18 @@
 
   .navbarLogo {
     position: absolute;
-    margin-top: -3px;
-    top: 0;
-    transform: translate(25%, 50%);
-    left: 20vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
   }
 
   .menuIcon {
     display: block;
     position: absolute;
-    top: -12px;
+    top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 50%);
     font-size: 1.8rem;
     cursor: pointer;
     color: #FFFFE4;
@@ -192,26 +187,26 @@
     -ms-overflow-style: none; 
     scrollbar-width: none; 
   }
-  
-  @media screen and (max-width: 600px) {
-    .navLinks {
-      left: 7%; /* Move links further left */
-    }
-    .navbarLogo{
-      margin-top: 3.5vw;
-      left: 48%; /* Center horizontally */
-      transform: translateX(-52%);
-    }
+}
+
+@media screen and (max-width: 600px) {
+  .navLinks {
+    left: 7%;
+  }
+
+  .navbarLogo {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbarLogo {
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
-  @media screen and (max-width: 480px) {
-    .navbarLogo{
-      margin-top: 3.5vw;
-      left: 46%; /* Center horizontally */
-      transform: translateX(-54%);
-    }
-    .navLinks {
-      left: 4%; /* Move links to the edge */
-    }
+  .navLinks {
+    left: 4%;
   }
 }
