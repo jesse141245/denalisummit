@@ -38,15 +38,7 @@ const Partners: React.FC = () => {
         <section id="partners" className={styles.partnersContainer}>
             <h2>Our Partners</h2>
             <div className={styles.partnersLogos} ref={partnersLogosRef}>
-                {Array.from({ length: 6 }, (_, index) => (
-                    <div
-                        key={index}
-                        className={styles.partnerLogo}
-                        style={{ transform: `scale(${scale})` }}
-                    >
-                        <img src='/chromeLogo.png' alt={`Partner ${index + 1}`} />
-                    </div>
-                ))}
+               
             </div>
         </section>
     );
